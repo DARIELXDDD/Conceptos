@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://plus.unsplash.com/premium_photo-1664041273166-58f5fdf2e6d3?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    height: 20vh;
+    animation: backgroundMove 20s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    filter: brightness(60%);
+}
+
+.header-content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.concepto {
+    background: #1e1e1e;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    flex: 1 1 calc(33% - 40px);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.concepto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.3), rgba(255, 105, 180, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.concepto:hover::before {
+    opacity: 1;
+}
+
+.concepto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    background-color: #2c2c2c;
+    border: 2px solid #ff6f61;
+}
+
+.concepto h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.concepto p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+code {
+    background-color: #333;
+    color: #ff6f61;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .concepto {
+        padding: 15px;
+        margin: 10px 0;
+        flex: 1 1 100%;
+    }
+}
+
+a {
+    color: #ff6f61;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #ff9f8f;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ff8f81;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
